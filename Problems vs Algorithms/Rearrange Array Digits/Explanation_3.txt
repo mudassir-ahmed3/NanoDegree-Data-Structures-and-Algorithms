@@ -1,0 +1,29 @@
+Assumption stated in question "You can assume that all array elements are in the range [0, 9]"
+
+Idea is in order to maximize  sum I need to place biggest digit in array, at biggest place, next big number in array will get the biggest place in secnd number and so on..
+For Example:
+  Array:[2, 4, 5, 6, 8, 9]
+biggest number 9 will go to the hundredth place of num1, second biggest number 8 will go to the hundredth place of 2nd number then third biggest nmber to tenth place of num1 and so on..
+i.e.
+	num1			num2
+                  ------------                                        ----------------
+	H T U                                                     H T U
+	 9 6 4     	                                          8 5 2
+
+
+To achieve this I followed these steps,
+	1.  sort the array using merge sort as implemented in classroom, it's avg case complexity is O(nlog n)
+	2.  I created two lists named num1 and num2 and keep appending digits in it from input array in the light of idea described above untill input list is exhausted, that's why actually I didn't need to care about how many digitswill be there in a number because it has been taken care of automatically in this approach
+	3.  convert the lists into number
+	
+
+
+########################################  Complexity  #############################################
+1. sort O(nlog n)
+2. creating lists O(n)
+3. converting lists into number O(n)
+
+therefore overall time complexity will be O(nlogn)
+
+Since, I have used extra lists num1 and num2 that size depends on input size, space complexity willl be O(n), since I used Quick sort that's an in place sorting algorithm,
+therefore overall space complexity will be O(n)

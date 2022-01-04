@@ -1,0 +1,13 @@
+take the first element of input list as minimum and maximum integer initially
+then traverse through the list:
+	 In traversal, if find any number smaller than our min update min
+	 	      if find any number bigger than our max update max
+
+
+return min,max 
+
+
+##################################  complexity ########################
+
+as we're going through the list in a single traversal, the time complexity will be O(n)
+as we don't have any data structure that's growing with input size, space complexity will be O(1)	              

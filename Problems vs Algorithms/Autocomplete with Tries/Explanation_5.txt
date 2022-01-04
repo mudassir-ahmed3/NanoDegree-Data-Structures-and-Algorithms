@@ -1,0 +1,17 @@
+Explanation:
+I implemented "Insert function" to add word to the trie as described in this course lesson i.e. starting from the root node for each character in a word if character isn't already in the trie add it, keep on traversing
+for "find function" that return node which represents that prefix, we traverse from root node of the trie, for each character in prefix, if character not in trie return None else keep traversing when loop end current node will be having the prefix node simply return i t
+for "suffix function" I implemented a helper function "find suffix" that recurse down the trie adding suffixes( while going down the trie whenver is_word property  of the node is True we append it to the list) to the suffixes list  
+
+
+Complexity:
+
+Insert: complexity of Insert will be O(n*m) where n is the number of characters in word being added in the trie,and m is the length of unique characters stored in each node In worst case each character of the word wouldn't be already present in the trie 
+
+find: O(n*m) where n is the number of words stored in the trie and m is the avg length of unique characters stored in each node
+
+suffixes: Complexity of suffixes would be O(n) as it's calling recursive fuction which is traversing for incoming prefix (node)
+
+therefore overall complexity would be O(n*m)
+
+space comlpexity will be O(n) as trie size(dictionary of Trie Node) would grow as number of words added to it  

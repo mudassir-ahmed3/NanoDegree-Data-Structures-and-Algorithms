@@ -1,0 +1,12 @@
+this problem was solved as classroom exercise, Idea is to  put 0's and 2's in their right places 1's will automatically get to their right place, so overall list will be sorted
+
+we will keep two pointers in the list pointing where next 0 should go or where next 2 should be placed and
+one front_index pointer to traverse through the list
+
+In a while loop we keep on putting 0's and 2's in their places as encountered with help of these pointers,
+next_pos_0 and front_index pointer will keeps on incrementing by 1 while next_pos_2 will be decrementing by 1
+
+
+#################################    complexity #####################################
+since this requires one pass through the array, run time complexity will be O(n)
+since we are doing in place sort space complexity willl be O(1)

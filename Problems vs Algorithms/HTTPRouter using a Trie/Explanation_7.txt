@@ -1,0 +1,29 @@
+First I implement a slightly different Trie than what we implemented for auto complete:
+i.e.
+1) implement a helper function "split_path: that split path on basis of '/' as it's decided we arn't going to split path character by character instead split by / and insert parts of path
+2) we have excluded sffixes method  and is_word property of TrieNode 
+
+"insert" and" find" function are underlying methods that  support adding a handler by path and looking up a handler by path, Router's class "add_handler" and "lookup" methods delegate these operations to them
+
+insert:
+ args: path_list, handler
+starting from root node, adding parts of path to the trie if not already, traverse down the path and add handler to the deepest node
+
+ find:
+args:  path_list
+
+starting from the root node, traverse down the trie matching the part of the path_list
+returns assosciated handler for a match or None for no match
+
+
+
+###############################  Complexity  ###################################
+add_handler is O(n * m) where n is the number of parts in a given path and m is the average length of unique path stored in each Node or separated by backslash.
+lookup O(n * m) where n is the number of URL(s)/depth of RouteTrie and m is the average length of unique path stored in each Node or separated by backslash.
+split_path helper function is O(n) where n is the number of parts of path returned by split function
+
+therefore overall time complexity would be O(n*m)
+
+space complexity is O(n) as trie size grows with number of pages(paths)
+
+ 

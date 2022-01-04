@@ -1,0 +1,4 @@
+simplest logic would be try with all-natural numbers starting from 1, Continue incrementing the number until the square of that number is greater than the given number but that would be O(n),
+so I applied little tweaked version of binary search to do this, therefore time complexity will be O(log(n))
+
+ space complexity is O(1) since space it's independent of input size  

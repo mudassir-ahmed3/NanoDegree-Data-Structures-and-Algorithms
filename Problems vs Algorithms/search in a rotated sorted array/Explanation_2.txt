@@ -1,0 +1,10 @@
+concept of binary search is to reduce the serch space by half each time but  binary search is applicable only on sorted data, So first of all by leaveraging information that input list is rotated sorted arra
+I find the smallest element index in the array (using binary search iterative) as it could be use to divide the array in two lists arranged in ascending order , 
+after that I applied binary search recursive on one of these halves based on target number I'm looking for.
+ 
+
+
+###################################################### Complexity ##########################################################
+
+I found the smallest element and target element using binary search therfore  time complexity will e O(log(n))
+since I used binary search, recursive call stack would be maintaing, therefore space space complexity is O(n)
