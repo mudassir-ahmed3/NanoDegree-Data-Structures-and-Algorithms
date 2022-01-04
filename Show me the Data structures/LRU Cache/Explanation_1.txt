@@ -1,0 +1,18 @@
+I used two data structures. One is the dictionary for hash map and second is a queue using doubly link list.
+
+- The main idea behind the usage of dictionary is the O(1) lookup in case of cache hit . 
+
+- I use queue to maintain the track of usage of cached data. So according to the policy, it should remove
+  the Least recently used node from it. When a new items is added , it will always be added to the tail.
+  If capacity is ful, queue will be dequeue the top element.
+
+- In case of a hit , i use `make_tail` method that removes that node from it's current position and makes it
+  tail 
+
+- Reason of using Double link list is that the insertion and deletion from Link list O(1) and I need to
+  reference the prev node to avoid the traversal during insertion.
+
+
+Since all the operations in the queue are also O(1) the over all complexity will be of O(1) 
+
+Space complexity will also be O(n) as the space taken by the program grows when the cache capacity increases

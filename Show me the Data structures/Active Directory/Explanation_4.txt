@@ -1,0 +1,7 @@
+I didn't introduce any new data structures. I add one user in each class and then try to access them from
+parent using a recursive for loop. First it will look into the users of the called group and then one by
+one go through the users of each of its groups.
+
+The time complexity will be O(n) as it will go through each list of users.
+
+The Space complexity will be O(n) as stack space will be required for recursive calls.

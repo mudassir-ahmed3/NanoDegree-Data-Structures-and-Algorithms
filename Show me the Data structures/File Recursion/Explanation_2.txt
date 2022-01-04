@@ -1,0 +1,13 @@
+This file structure is sort of a tree structure where the top directory is a root node and has files and
+subdirectories as it's children. Since we have to find in every subdirectory for the file passed as suffix,
+I used DFS. It will take all the children starting from Root and put them in a list data.
+Then traverse through the loop and check for the file, if it found one and it has right suffix, it adds in
+to the "result" list else it recursively calls the same method for the direcotry paths for it's
+children. 
+
+Since we have to traverse the complety directory tree, the time complexity will O(n) where n is the total
+number of all the files and directories in the root url
+
+The space compleity will be O(n) where n is the sum of all the sub direcotries inside the parent direcotry.
+As In worst case the file wont be inside the directory and it will have search in all the sub-directories.
+Since it needs recursive call and the complexity will be the stack space needed for all recuresive calls. 
