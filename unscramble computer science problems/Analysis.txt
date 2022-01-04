@@ -1,0 +1,6 @@
+task0:  O(1) since run-time of my program is independent of input size
+task1: O(n) since run time of my program will increase in direct propotion with input size
+task2: O(n) there are two for loops but since they aren't nested and they run as per the size input list so run time will be increasing in direct proportion
+task3A: O(nlogn) sort will set the upper bound for my program 
+task3B: O(n)  only one for loop runs as many times as size of input list
+task4: O(nlogn) sort will set the upper bound of my program 
